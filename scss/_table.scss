@@ -1,0 +1,51 @@
+.ux-datatable {
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  height: auto;
+  border-collapse: collapse;
+
+  &__header {
+    &.sticky {
+      box-shadow: 0 1px 5px 0 rgba(100,100,100,.75);
+    }
+
+    &-row {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+    }
+
+    &-column {
+      border-bottom: 1px solid #dddddd;
+      font-weight: 300;
+      font-size: 12px;
+      text-align: left;
+      padding: 15px 15px 8px 0;
+    }
+  }
+
+  &__body {
+    display: block;
+    height: 400px;
+    overflow: auto;
+
+    &-row {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+    }
+
+    &-row:last-child {
+      & .ux-datatable__body-column {
+        border-bottom: none;
+      }
+    }
+
+    &-column {
+      border-bottom: 1px solid #dddddd;
+      font-weight: 300;
+      font-size: 12px;
+      padding: 7px 0;
+    }
+  }
+}

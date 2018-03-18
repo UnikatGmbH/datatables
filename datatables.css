@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+.ux-datatable {
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  height: auto;
+  border-collapse: collapse; }
+  .ux-datatable__header.sticky {
+    box-shadow: 0 1px 5px 0 rgba(100, 100, 100, 0.75); }
+  .ux-datatable__header-row {
+    display: table;
+    width: 100%;
+    table-layout: fixed; }
+  .ux-datatable__header-column {
+    border-bottom: 1px solid #dddddd;
+    font-weight: 300;
+    font-size: 12px;
+    text-align: left;
+    padding: 15px 15px 8px 0; }
+  .ux-datatable__body {
+    display: block;
+    height: 400px;
+    overflow: auto; }
+    .ux-datatable__body-row {
+      display: table;
+      width: 100%;
+      table-layout: fixed; }
+    .ux-datatable__body-row:last-child .ux-datatable__body-column {
+      border-bottom: none; }
+    .ux-datatable__body-column {
+      border-bottom: 1px solid #dddddd;
+      font-weight: 300;
+      font-size: 12px;
+      padding: 7px 0; }
+
+/*# sourceMappingURL=datatables.css.map */
