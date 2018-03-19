@@ -1,49 +1,63 @@
 .ux-datatable {
-  font-family: 'Roboto', sans-serif;
-  width: 100%;
-  height: auto;
-  border-collapse: collapse;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: auto;
+    border-collapse: collapse;
 
-  &__header {
-    display: block;
+    /**
+    General stylings
+     */
+    &__header {
+        display: block;
 
-    &-row {
-      display: table;
-      width: 100%;
-      table-layout: fixed;
+        &-row {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+        }
+
+        &-column {
+            border-bottom: 1px solid #DDDDDD;
+            font-weight: 300;
+            font-size: 12px;
+            text-align: left;
+            padding: 15px 15px 8px 8px;
+        }
     }
 
-    &-column {
-      border-bottom: 1px solid #dddddd;
-      font-weight: 300;
-      font-size: 12px;
-      text-align: left;
-      padding: 15px 15px 8px 0;
-    }
-  }
+    &__body {
+        display: block;
+        height: 400px;
+        overflow: auto;
 
-  &__body {
-    display: block;
-    height: 400px;
-    overflow: auto;
+        &-row {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+        }
 
-    &-row {
-      display: table;
-      width: 100%;
-      table-layout: fixed;
+        &-row:last-child {
+            & .ux-datatable__body-column {
+                border-bottom: none;
+            }
+        }
+
+        &-column {
+            border-bottom: 1px solid #DDDDDD;
+            font-weight: 300;
+            font-size: 12px;
+            padding: 10px 8px;
+        }
     }
 
-    &-row:last-child {
-      & .ux-datatable__body-column {
-        border-bottom: none;
-      }
+    /**
+    Striped table rows
+     */
+    &.striped-rows tr:nth-child(even) {
+        background-color: #DDDDDD;;
     }
 
-    &-column {
-      border-bottom: 1px solid #dddddd;
-      font-weight: 300;
-      font-size: 12px;
-      padding: 7px 0;
+    &.striped-columns &__body td:nth-child(even) {
+        background-color: #DDDDDD;
     }
-  }
 }
